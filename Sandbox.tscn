@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BlobPoly.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Curve2D" id=1]
+resource_local_to_scene = true
+_data = {
+"points": PoolVector2Array( 21.0458, 9.80216, -21.0458, -9.80216, -138, 200, -6.63087, 132.906, 6.63087, -132.906, -219, 39, 0, 0, 0, 0, -72, -79, -40.0735, -85.0481, 40.0735, 85.0481, 189, -8, 60.2544, -78.9938, -60.2544, 78.9938, 173, 225, 0, 0.288299, 0, -0.288299, -136, 201 )
+}
+
+[node name="Sandbox" type="Node2D"]
+
+[node name="BlobPoly" parent="." instance=ExtResource( 1 )]
+position = Vector2( 384, 201 )
+
+[node name="Path2D" parent="BlobPoly" index="0"]
+curve = SubResource( 1 )
+
+[editable path="BlobPoly"]
